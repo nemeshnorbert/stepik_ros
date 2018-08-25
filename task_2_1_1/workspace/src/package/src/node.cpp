@@ -13,8 +13,7 @@ int main(int argc, char** argv) {
 
   ros::Rate loop_rate(10);
   std_msgs::Int32 value;
-  while (std::cin) {
-    std::cin >> value.data;
+  while (std::cin >> value.data) {
     publisher.publish(value);
     loop_rate.sleep();
   }
