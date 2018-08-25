@@ -5,7 +5,7 @@
 
 
 void recieve(const std_msgs::Int32& value) {
-  std::cout << ros::this_node::getName() << ": data: " << value.data;
+  std::cout << ros::this_node::getName() << ": data: " << value.data << "\n";
 }
 
 
