@@ -9,6 +9,8 @@ int main(int argc, char** argv) {
   ros::NodeHandle handle;
   ros::Publisher publisher = handle.advertise<std_msgs::Int32>("/topic", 1000);
 
+  ros::Duration(1).sleep();
+
   ros::Rate loop_rate(10);
   std_msgs::Int32 value;
   while (std::cin) {
