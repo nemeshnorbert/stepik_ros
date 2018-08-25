@@ -126,14 +126,14 @@ include_directories(
 # add_dependencies(package ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Declare a C++ executable
-add_executable(publisher src/publisher.cpp)
+add_executable(node src/node.cpp)
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
 # add_dependencies(package_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
-target_link_libraries(publisher
+target_link_libraries(node
   ${catkin_LIBRARIES}
 )
 
