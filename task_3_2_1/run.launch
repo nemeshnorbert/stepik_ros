@@ -6,6 +6,6 @@
       <remap from="input_aray" to="input_array"/>
    </node>
   <node pkg="example_pkg" type="node3"  name="node3" output="screen">
-      <param name="max_size" type="int" value=$(arg max_size)/>
+      <param name="max_size" type="int" value="$(arg max_size)"/>
    </node>
 </launch>
