@@ -13,7 +13,8 @@ int main(int argc, char** argv) {
   ros::init(argc, argv, "concat_string_server");
   ros::NodeHandle handle;
 
-  ros::ServiceServer service = handle.advertiseService("concat_strings", concat);
+  const std::string service_name = ros::this_node::getName() + "/concat_strings";
+  ros::ServiceServer service = handle.advertiseService(service_name, concat);
   ros::spin();
 
   return 0;
