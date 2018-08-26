@@ -38,12 +38,12 @@ class ProcessorNode {
 
   private:
     void subscriberCallback(const geometry_msgs::Point& point) {
+      points_.push_back(point);
       if (points_.size() < queue_size_) {
-        points_.push_back(point);
         return;
       }
-      points_.clear();
       publisher_.publish(buildMarker(points_));
+      points_.clear();
     }
 
     ros::NodeHandle handle_;
