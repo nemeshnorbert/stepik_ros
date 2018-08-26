@@ -40,6 +40,7 @@ class ProcessorNode {
     void subscriberCallback(const geometry_msgs::Point& point) {
       if (points_.size() < queue_size_) {
         points_.push_back(point);
+        return;
       }
       points_.clear();
       publisher_.publish(buildMarker(points_));
